@@ -7,8 +7,9 @@ import { useEffect, useRef } from "react";
 const MainLayout = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const roomsRef = useRef(null);
+  const roomsRef = useRef<HTMLDivElement | null>(null); // Explicitly typing the ref
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleNavigate = (roomId: number, room: any) => {
     // If already on `/hotel/...`, replace the last segment with the new room ID
     if (location.pathname.startsWith("/hotel")) {
