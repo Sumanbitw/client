@@ -7,8 +7,8 @@ const Navbar = () => {
       {/* Logo */}
       <p className="font-poppins font-bold text-xl">Sourav's Stay</p>
 
-      {/* Centered Nav Links */}
-      <div className="flex gap-8">
+      {/* Centered Nav Links (Hidden on Mobile) */}
+      <div className="hidden md:flex gap-8">
         {["Home", "Hotel", "Contacts"].map((item) => (
           <NavLink
             key={item}
